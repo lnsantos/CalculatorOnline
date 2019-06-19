@@ -40,20 +40,44 @@ export default class Calculetor extends Component{
                     var valueFinish = values[0] + values[1];
                     this.setState({
                         displayValue: valueFinish,
-                        clearDisplay: true,
-                        values: [ 0, valueFinish],
-                        current: 0,
-                        operation: null
+                        clearDisplay: !finish,
+                        values: finish ? [valueFinish,1  ] : [ 0,valueFinish],
+                        current: finish ? 0 : 1,
+                        operation: currentOpenration
                     });
                     console.log('Soma tudo')
                     break;
                 case '-':
+                        var valueFinish = values[0] - values[1];
+                        this.setState({
+                            displayValue: valueFinish,
+                            clearDisplay: !finish,
+                            values: finish ? [valueFinish,1  ] : [ 0,valueFinish],
+                            current: finish ? 0 : 1,
+                            operation: currentOpenration
+                        });
                     console.log('Subitrai tudo')
                     break;
                 case '*':
+                        var valueFinish = values[0] * values[1];
+                        this.setState({
+                            displayValue: valueFinish,
+                            clearDisplay: !finish,
+                            values: finish ? [valueFinish,1  ] : [ 0,valueFinish],
+                            current: finish ? 0 : 1,
+                            operation: currentOpenration
+                        });
                     console.log('Multiplica tudo')
                     break;
                 case '/':
+                        var valueFinish = values[0] / values[1];
+                        this.setState({
+                            displayValue: valueFinish,
+                            clearDisplay: !finish,
+                            values: finish ? [valueFinish,1  ] : [ 0,valueFinish],
+                            current: finish ? 0 : 1,
+                            operation: currentOpenration
+                        });
                     console.log('Divide tudo')
                     break;
             }
