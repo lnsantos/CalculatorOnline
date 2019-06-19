@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Calculator from './main/Calculetor';
 import * as serviceWorker from './serviceWorker';
-
-ReactDOM.render(<div><h1>Calculator Online</h1><Calculator /></div>, document.getElementById('root'));
+import {ReactComponent as logo} from './logo.svg';
+ReactDOM.render(<div><img src={logo} width="150" height="150" className="App-logo" alt="logo" /><h1>Calculator Online</h1><Calculator /></div>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
